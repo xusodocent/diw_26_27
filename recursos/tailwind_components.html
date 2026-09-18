@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemple de Tailwind CSS - Pàgina Completa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Barra de Navegació -->
+  <nav class="bg-blue-500 p-4 fixed w-full top-0 left-0 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="#" class="text-white font-bold text-xl">Logo</a>
+      <div class="space-x-4">
+        <a href="#" class="text-white hover:text-gray-300">Inici</a>
+        <a href="#cards" class="text-white hover:text-gray-300">Cards</a>
+        <a href="#form" class="text-white hover:text-gray-300">Contacte</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-blue-500 text-white h-screen flex flex-col justify-center items-center text-center">
+    <h1 class="text-4xl font-bold mb-4">Benvingut a la meva pàgina amb Tailwind CSS</h1>
+    <p class="text-lg mb-8">Utilitzant Tailwind per crear dissenys responsius i adaptatius ràpidament.</p>
+    <button class="bg-white text-blue-500 py-2 px-4 rounded hover:bg-gray-200">Comença ara</button>
+  </header>
+
+  <!-- Cards Section -->
+  <section id="cards" class="py-16 px-4">
+    <h2 class="text-3xl font-bold text-center mb-8">Els nostres serveis</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <img class="w-full h-40 object-cover rounded-t-lg" src="https://alohacamp.com/es/travels/wp-content/uploads/2024/09/montanas-de-espana-ZW.webp" alt="Imatge del servei 1">
+        <h3 class="text-xl font-semibold mt-4">Servei 1</h3>
+        <p class="text-gray-700 mt-2">Aquesta és una descripció dels serveis que oferim. El contingut és totalment personalitzable.</p>
+        <button class="bg-blue-500 text-white py-2 px-4 rounded mt-4 hover:bg-blue-700">Més informació</button>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <img class="w-full h-40 object-cover rounded-t-lg" src="https://alohacamp.com/es/travels/wp-content/uploads/2024/09/montanas-de-espana-1.jpg" alt="Imatge del servei 2">
+        <h3 class="text-xl font-semibold mt-4">Servei 2</h3>
+        <p class="text-gray-700 mt-2">Descripció del segon servei. Aquí pots explicar més sobre el teu producte o servei.</p>
+        <button class="bg-blue-500 text-white py-2 px-4 rounded mt-4 hover:bg-blue-700">Més informació</button>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <img class="w-full h-40 object-cover rounded-t-lg" src="https://alohacamp.com/es/travels/wp-content/uploads/2024/09/montanas-de-espana-norte.jpg" alt="Imatge del servei 3">
+        <h3 class="text-xl font-semibold mt-4">Servei 3</h3>
+        <p class="text-gray-700 mt-2">Aquesta columna descriu el tercer servei. Afegeix una breu explicació aquí.</p>
+        <button class="bg-blue-500 text-white py-2 px-4 rounded mt-4 hover:bg-blue-700">Més informació</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slider Section -->
+  <section class="py-16 bg-gray-200">
+    <h2 class="text-3xl font-bold text-center mb-8">Galeria d'imatges</h2>
+    <div class="relative">
+      <div class="w-full h-64 bg-gray-300 rounded-lg overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center" style="background-image: url('https://via.placeholder.com/800x400');"></div>
+        <div class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 py-2">Imatge 1</div>
+      </div>
+      <div class="w-full flex justify-center mt-4 space-x-2">
+        <button class="bg-white text-gray-800 p-2 rounded-full hover:bg-gray-300">⟨</button>
+        <button class="bg-white text-gray-800 p-2 rounded-full hover:bg-gray-300">⟩</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="form" class="py-16 px-4">
+    <h2 class="text-3xl font-bold text-center mb-8">Contacta'ns</h2>
+    <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+      <form>
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-medium text-gray-700">Nom</label>
+          <input type="text" id="name" class="w-full p-2 mt-1 border border-gray-300 rounded-lg" placeholder="El teu nom">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-medium text-gray-700">Correu Electrònic</label>
+          <input type="email" id="email" class="w-full p-2 mt-1 border border-gray-300 rounded-lg" placeholder="El teu correu">
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-sm font-medium text-gray-700">Missatge</label>
+          <textarea id="message" class="w-full p-2 mt-1 border border-gray-300 rounded-lg" rows="4" placeholder="Escriu el teu missatge"></textarea>
+        </div>
+        <button type="submit" class="w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Envia</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-500 text-white py-4 text-center">
+    <p>&copy; 2023 La teva empresa. Tots els drets reservats.</p>
+  </footer>
+
+</body>
+</html>

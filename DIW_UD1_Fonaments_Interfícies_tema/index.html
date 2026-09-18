@@ -1,0 +1,3947 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="../DIW_UD1_Fonaments_Interf%C3%ADcies_Pr/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Fonaments d'Interfícies - DISSENY D'INTERFÍCIES WEB - 2DAWsp - Xuso Ortí I Josep Magraner</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-estructura" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href=".." title="DISSENY D&#39;INTERFÍCIES WEB - 2DAWsp - Xuso Ortí I Josep Magraner" class="md-header__button md-logo" aria-label="DISSENY D'INTERFÍCIES WEB - 2DAWsp - Xuso Ortí I Josep Magraner" data-md-component="logo">
+      
+  <img src="../img/logocap.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DISSENY D'INTERFÍCIES WEB - 2DAWsp - Xuso Ortí I Josep Magraner
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fonaments d'Interfícies
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Format oscur"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Format oscur" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Format clar"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Format clar" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestanyes" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  UD1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DIW_UD2_introducci%C3%B3_css/" class="md-tabs__link">
+          
+  
+  
+  UD2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DIW_UD3_css_avan%C3%A7at/" class="md-tabs__link">
+          
+  
+  
+  UD3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DIW_projecte_1a_av/" class="md-tabs__link">
+          
+  
+  
+  Projecte 1a AV
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DIW_UD4_sass/" class="md-tabs__link">
+          
+  
+  
+  UD4
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DIW_UD5_bootstrap_intro/" class="md-tabs__link">
+          
+  
+  
+  UD5
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DIW_UD6_multimedia/" class="md-tabs__link">
+          
+  
+  
+  UD6
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DIW_UD7_accesibilitat/" class="md-tabs__link">
+          
+  
+  
+  UD7
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DIW_projecte_2av/" class="md-tabs__link">
+          
+  
+  
+  Projecte 2av
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DIW_UD8_tailwind_instalacio/" class="md-tabs__link">
+          
+  
+  
+  UD8 Tailwind CSS
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../animacions_css/" class="md-tabs__link">
+          
+  
+  
+  Annexes
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DISSENY D&#39;INTERFÍCIES WEB - 2DAWsp - Xuso Ortí I Josep Magraner" class="md-nav__button md-logo" aria-label="DISSENY D'INTERFÍCIES WEB - 2DAWsp - Xuso Ortí I Josep Magraner" data-md-component="logo">
+      
+  <img src="../img/logocap.png" alt="logo">
+
+    </a>
+    DISSENY D'INTERFÍCIES WEB - 2DAWsp - Xuso Ortí I Josep Magraner
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            UD1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    UD1 Eines de Fonaments d'Interfícies
+    
+      <br>
+      <small>Xuso Ortí Monton - Josep Magraner Ramon</small>
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD1 Eines de Fonaments d'Interfícies
+    
+      <br>
+      <small>Xuso Ortí Monton - Josep Magraner Ramon</small>
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-estructura" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Estructura
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Estructura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-evolucio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Evolució
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-interaccio-persona-ordenador-ipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Interacció persona-ordenador (IPO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-elements-duna-interficie-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Elements d'una interfície web
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Colors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 Components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-planificacio-i-disseny" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Planificació i disseny
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Planificació i disseny">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Mapes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-esbos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Esbós
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-wireframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Wireframe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mockup" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Mockup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-prototip" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 Prototip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-guies-destil" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 Guies d'estil
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-desenvolupament-de-la-interficie-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Desenvolupament de la interfície web
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Desenvolupament de la interfície web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-llenguatges" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Llenguatges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-frameworks-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Frameworks CSS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-editors" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Editors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-html5-semantica" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 HTML5 semàntica
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-eines-de-programari" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Eines de programari
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Eines de programari">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-entorns-de-desenvolupament" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Entorns de desenvolupament
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Git
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD1_Fonaments_Interf%C3%ADcies_Pr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica
+    
+      <br>
+      <small>Xuso Ortí Monton - Josep Magraner Ramon</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            UD2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD2_introducci%C3%B3_css/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD2 Introducció a CSS
+    
+      <br>
+      <small>Xuso Ortí Monton - Josep Magraner Ramon</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD2_Pr%C3%A0ctica_guiada/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica guiada (no entregar)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD2_Prac_CSS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica Maquetació
+    
+      <br>
+      <small>Xuso Ortí Monton - Josep Magraner Ramon</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD3
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UD3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD3_css_avan%C3%A7at/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD3 CSS Avançat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD3_prac_mediaquery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD3 Pràctica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Codis Exemple
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Codis Exemple
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD3_CSSavan%C3%A7at_codis_extra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemples unitat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projecte 1a AV
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projecte 1a AV
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_projecte_1a_av/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enunciat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD4
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            UD4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apunts del tema
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Apunts del tema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD4_sass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sass
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD4_sass_02_Installacio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modificacions de SASS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques del tema
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques del tema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD4_sass_pr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pràctica SASS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Exemples codi
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Exemples codi
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD4_sass_exemples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemples unitat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD5
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            UD5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apunts del tema
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Apunts del tema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD5_bootstrap_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bootstrap Intro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD5_bootstrap_rejilla/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bootstrap Rejilla
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD5_bootstrap_elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bootstrap Elements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques del tema
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques del tema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD5_bootstrap_pr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pràctica Bootstrap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Exemples codi
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Exemples codi
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD5_bootstrap_codis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemples unitat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD6
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            UD6
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apunts del tema
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Apunts del tema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD6_multimedia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multimedia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD6_exemples_codi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemples de codi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques del tema
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques del tema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD6_practica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pràctica Multimedia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD7
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            UD7
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apunts del tema
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Apunts del tema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1_1" id="__nav_8_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Accesibilitat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Accesibilitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD7_accesibilitat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bones pràctiques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD7_aria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ARIA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD7_usabilitat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Usabilitat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD7_practica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques del tema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projecte 2av
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Projecte 2av
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_projecte_2av/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enunciat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques del tema
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques del tema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD6_flexbox_pr.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pràctica Flexbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD6_grid_pr.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pràctica Grid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Exemples codi
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            Exemples codi
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD6_flexbox_grid_codis.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemples unitat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD8 Tailwind CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            UD8 Tailwind CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apunts del tema
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            Apunts del tema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD8_tailwind_instalacio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instal·lació i configuració
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD8_tailwind_grid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    El grid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD8_tailwind_dissenys_responsius/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dissenys responsius
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD8_tailwind_components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Components i utilitats
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD8_tailwind_jit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JIT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques del tema
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques del tema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIW_UD8_tailwind_practica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pràctica Tailwind
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Annexes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Annexes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Animacions CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            Animacions CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../animacions_css/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Explicació
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../animacions_css_exemples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../animacions_css_codis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Codi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Efecte Paral·laxi
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Efecte Paral·laxi
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica_bear_grills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pràctica guiada
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Canva
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            Canva
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../canva/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Canva
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-estructura" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Estructura
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Estructura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-evolucio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Evolució
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-interaccio-persona-ordenador-ipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Interacció persona-ordenador (IPO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-elements-duna-interficie-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Elements d'una interfície web
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Colors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 Components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-planificacio-i-disseny" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Planificació i disseny
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Planificació i disseny">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Mapes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-esbos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Esbós
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-wireframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Wireframe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mockup" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Mockup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-prototip" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 Prototip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-guies-destil" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 Guies d'estil
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-desenvolupament-de-la-interficie-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Desenvolupament de la interfície web
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Desenvolupament de la interfície web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-llenguatges" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Llenguatges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-frameworks-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Frameworks CSS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-editors" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Editors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-html5-semantica" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 HTML5 semàntica
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-eines-de-programari" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Eines de programari
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Eines de programari">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-entorns-de-desenvolupament" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Entorns de desenvolupament
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Git
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>UD1 Eines de Fonaments d'Interfícies</h1>
+
+<h2 id="1-estructura">1. Estructura</h2>
+<h3 id="11-evolucio">1.1 Evolució</h3>
+<p>Les interfícies web han tingut una marcada evolució des del naixement d'internet fins a l'actualitat. Com a curiositat pots consultar la primera pàgina web de la història <a href="https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html">ací</a> i observar que pràcticament no tenia cap atractiu pel que fa al disseny visual.</p>
+<ul>
+<li>
+<p><strong>Web 1.0 (Dècada de 1990):</strong> En aquesta primera etapa, les pàgines web eren bàsicament text i hipervincles. No hi havia molta consideració pel disseny i la funcionalitat era limitada. Les pàgines tenien colors bàsics i imatges simples.</p>
+</li>
+<li>
+<p><strong>Web 2.0 (Mitjans de la dècada de 2000):</strong> Aquesta etapa va veure un canvi significatiu en la forma en què les pàgines web eren dissenyades. Les pàgines web van començar a ser més interactives i dinàmiques amb l'ús de tecnologies com AJAX. Les paletes de colors es van ampliar, es van introduir fonts més variades i van aparèixer les primeres ombres i efectes d'animació.</p>
+</li>
+<li>
+<p><strong>Disseny Responsiu (Tard de la dècada de 2000 - Actualitat):</strong> Amb la popularització dels dispositius mòbils i les tauletes, va sorgir la necessitat d'adaptar les pàgines web a diferents mides de pantalla. Això va donar lloc al concepte de disseny web responsiu, on les pàgines poden adaptar-se fluidament a qualsevol pantalla, ja sigui un ordinador d'escriptori, una tauleta o un telèfon mòbil.</p>
+</li>
+<li>
+<p><strong>Minimalisme (Dècada de 2010 - Actualitat):</strong> El disseny minimalista es va fer popular amb l'èmfasi en la simplicitat i la claredat. Fonts sans-serif, molts espais en blanc i un ús limitat de colors es van convertir en tendència. Els botons i les icones sovint es van simplificar per a una millor experiència de l'usuari.</p>
+</li>
+<li>
+<p><strong>Disseny d'Aplicacions Web (Actualitat):</strong> Amb l'augment de les aplicacions web i la seva funcionalitat més avançada, el disseny d'interfícies web s'ha inspirat en gran mesura en el disseny d'aplicacions. Això inclou l'ús d'interfícies d'usuari més complexos i dinàmics, com ara panells de control, gràfics interactius i animacions més elaborades.</p>
+</li>
+<li>
+<p><strong>Disseny de Microinteraccions (Actualitat):</strong> Les microinteraccions són petits detalls d'interacció que fan que una pàgina web sigui més atractiva i útil. Aquestes poden incloure animacions quan l'usuari passa el ratolí per sobre d'un element o fa clic en un botó. Són importants per millorar l'experiència de l'usuari.</p>
+</li>
+<li>
+<p><strong>Disseny de Temes Fosc i Lluminós (Actualitat):</strong> Amb l'augment de les pantalles OLED i la preocupació per l'eficiència energètica, els dissenyadors han començat a oferir opcions de temes fosc i lluminós per a les pàgines web. Això permet als usuaris triar el tema que els sigui més còmode.</p>
+</li>
+<li>
+<p><strong>Disseny d'Accessibilitat (Actualitat):</strong> Hi ha un creixent enfocament en la inclusió i l'accessibilitat, assegurant que les pàgines web siguin utilitzables per a persones amb discapacitats. Això inclou l'ús de marcups semàntics, alts i altres pràctiques per millorar la compatibilitat amb lectors d' pantalla i altres ajudes.</p>
+</li>
+<li>
+<p><strong>Integració d'Intel·ligència Artificial (Actualitat):</strong> L'ús de la intel·ligència artificial i l'aprenentatge automàtic s'ha introduït en el disseny d'interfícies web per personalitzar la experiència de l'usuari i millorar la navegació.</p>
+</li>
+</ul>
+<p>En resum, el disseny d'interfícies web ha passat per diverses etapes d'evolució, des de les senzilles pàgines web 1.0 fins a les interfícies web responsives i d'aplicacions sofisticades d'avui dia. A mesura que la tecnologia i les preferències de l'usuari continuen canviant, és probable que el disseny web segueixi evolucionant en el futur.</p>
+<h3 id="12-interaccio-persona-ordenador-ipo">1.2 Interacció persona-ordenador (IPO)</h3>
+<blockquote>
+<p><strong>La Interacció Persona-Ordinador (IPO)</strong> en una interfície gràfica es el camp d'estudi que es centra en la comunicació i la interacció entre les persones i les computadores a través de la utilització d'interfícies gràfiques d'usuari (GUI, per les seves sigles en anglès, Graphical User Interface). </p>
+</blockquote>
+<p>Les interfícies gràfiques són aquelles que permeten als usuaris interactuar amb un ordinador mitjançant elements visuals com finestres, icones, botons i altres elements gràfics en lloc de simplement utilitzar text o comandes.</p>
+<p>Aquí tens alguns conceptes i aspectes importants relacionats amb la IPO en una interfície gràfica:</p>
+<ul>
+<li>
+<p><strong>Usabilitat:</strong> La IPO se centra en crear interfícies gràfiques que siguin fàcils d'usar i que proporcionin una bona experiència a l'usuari. Això implica considerar factors com la facilitat de navegació, la claredat de la informació i la intuïtivitat de les accions de l'usuari.</p>
+</li>
+<li>
+<p><strong>Elements d'Interfície:</strong> Les interfícies gràfiques inclouen diversos elements, com ara finestres, caixes de diàleg, botons, camps de text, icones i més. El disseny i la disposició adequats d'aquests elements són crucials per a una interacció eficient.</p>
+</li>
+<li>
+<p><strong>Interacció Directa:</strong> En les interfícies gràfiques, els usuaris interactuen directament amb els elements visuals mitjançant dispositius d'entrada com el ratolí o la pantalla tàctil. Això permet una interacció més immediata i natural.</p>
+</li>
+<li>
+<p><strong>Retroalimentació Visual:</strong> Les interfícies gràfiques proporcionen retroalimentació visual als usuaris per indicar l'estat d'una acció o una operació. Per exemple, canvis de color en botons quan es passa el ratolí per sobre o es fa clic en ells.</p>
+</li>
+<li>
+<p><strong>Jerarquia Visual:</strong> Els elements visuals es disposen de manera que es comuniqui una jerarquia d'informació i funcions. Per exemple, els elements més importants o freqüentment utilitzats es destaquen més que els menys importants.</p>
+</li>
+<li>
+<p><strong>Disseny Responsiu:</strong> En l'era de múltiples dispositius, les interfícies gràfiques han de ser dissenyades per ser responsives, adaptant-se a diferents mides de pantalla i resolucions.</p>
+</li>
+<li>
+<p><strong>Accions de l'Usuari:</strong> L'usuari pot realitzar diverses accions en una interfície gràfica, com ara fer clic, fer arrossegaments, fer doble clic, escriure en camps de text, etc. La IPO es centra en com facilitar aquestes accions i assegurar-se que siguin intuïtives i eficients.</p>
+</li>
+<li>
+<p><strong>Accessibilitat:</strong> També és crucial garantir que les interfícies gràfiques siguin accessibles per a persones amb discapacitats mitjançant l'ús de marcups semàntics, opcions de text alternatives per a elements visuals, i altres pràctiques d'accessibilitat.</p>
+</li>
+</ul>
+<p><img alt="Disciplines relacionades" src="../img/IPO.png" /></p>
+<p>En resum, la Interacció Persona-Ordinador en una interfície gràfica implica dissenyar i optimitzar la forma en què les persones interactuen amb els ordinadors mitjançant elements visuals i com es comunica la informació. És una àrea fonamental en el desenvolupament de programari i el disseny d'aplicacions i llocs web per proporcionar una millor experiència d'usuari.</p>
+<h3 id="13-elements-duna-interficie-web">1.3 Elements d'una interfície web</h3>
+<p>Trobem elements de diferents tipus:</p>
+<ul>
+<li><strong>Elements d'identificació:</strong> títol, logo, imatge de capçalera. </li>
+<li><strong>Elements de navegació:</strong>  Menú principal, ginys, <code>Aside</code> de navegació, Menú de navegació del peu de pàgina o <code>footer</code>. </li>
+<li><strong>Elements de continguts:</strong> text, imatges, multimedia. </li>
+<li><strong>Elements d'interacció:</strong> botons, enllaços.</li>
+</ul>
+<blockquote>
+<p>Un <code>breadcrumb</code> (o "migas de pan" en castellà) en una interfaz web és una representació visual d'una estructura jeràrquica de pàgines web. Aquesta característica ajuda als usuaris a entendre la seva ubicació actual dins d'un lloc web i a navegar fàcilment cap enrere a les pàgines anteriors o cap amunt en la jerarquia del lloc.
+ <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>Inici &gt; Secció Principal &gt; Subsecció &gt; Pàgina Actual
+</span></code></pre></div></td></tr></table></div></p>
+<p>Una <strong>landing page</strong> o pàgina d'aterratge és una pàgina dins d'un lloc web, desenvolupada amb l'objectiu de convertir als visitants en <code>leads</code> (clients potencials que mostren interés a consumir un producte o servei, usualment deixant les seues dades personals de contacte). Generalment té un disseny molt senzill amb pocs enllaços, informació bàsica sobre l'empresa i un formulari que facilita la conversió.</p>
+</blockquote>
+<h3 id="14-colors">1.4 Colors</h3>
+<p>La representació del color més habitual en <code>html</code> és utilitzant codi hexadecimal o representació RGB, tot i que existeixen altres representacions. </p>
+<ul>
+<li><strong>Noms predefinits:</strong> HTML inclou una llista de noms de colors predefinits que pots utilitzar. Aquests noms de colors són fàcils d'entendre i utilitzar, i inclouen colors com "red" (vermell), "blue" (blau), "green" (verd), "yellow" (groc), entre d'altres. Per exemple:</li>
+</ul>
+<p><div class="language-html highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color: red;&quot;</span><span class="p">&gt;</span>Aquest text és de color roig.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+En <a href="https://htmlcolorcodes.com/es/nombres-de-los-colores/">aquest enllaç</a> tens tota la llista de colors per nomenclatura.</p>
+<ul>
+<li><strong>HEXADECIMAL:</strong> Els codis de colors HEX utilitzen una combinació de sis dígits hexadecimals (0-9 i A-F) per representar un color. Els dos primers dígits representen la quantitat de vermell, els dos següents la quantitat de verd, i els dos últims la quantitat de blau.</li>
+</ul>
+<div class="language-html highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color: #FF0000;&quot;</span><span class="p">&gt;</span>Aquest text és de color vermell utilitzant codi HEX.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>RGB:</strong> Pots representar colors mitjançant codis de colors RGB (Red, Green, Blue). Aquesta notació utilitza tres valors numèrics per a cada canal de color (0-255) per especificar la quantitat de roig, verd i blau en un color. </li>
+</ul>
+<div class="language-html highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color: rgb(255, 0, 0);&quot;</span><span class="p">&gt;</span>Aquest text és de color roig utilitzant codi RGB.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>RGBA:</strong> Els codis de colors RGBA són similars als codis RGB, però inclouen un quart valor que representa l'alfa (transparència) del color. L'alfa pot ser un valor decimal entre 0 (totalment transparent) i 1 (totalment opac). </li>
+</ul>
+<div class="language-html highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color: rgba(255, 0, 0, 0.5);&quot;</span><span class="p">&gt;</span>Aquest text és de color vermell amb una transparència del 50%.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>Gradients CSS:</strong> També pots utilitzar gradients CSS per crear transicions de colors suaus en un element. Aquesta tècnica et permet especificar punts de color i direccions per crear efectes de gradient. </li>
+</ul>
+<p><div class="language-html highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background: linear-gradient(to right, red, yellow);&quot;</span><span class="p">&gt;</span>Aquest div té un gradient roig a groc.<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+Els <code>Color Picker</code> són eines d'utilitat per a provar la representació dels colors en els diferents codis. <a href="http://w3schools-fa.ir/colors/colors_picker11e1.html?colorhex=8A2BE2#gsc.tab=0">Ací</a> pots fer proves amb el de la <strong>3Wschool</strong>.</p>
+<h3 id="15-components">1.5 Components</h3>
+<p>En la següent figura podem vore els components principals d'una interfície web general.</p>
+<p><img alt="Components d'una interfície web" src="../img/componentes-interfaz-web.png" /></p>
+<p>Generalment una interfície web està composada per una capçalera, barra de navegació o <code>navbar</code>, cos principal, barra lateral o <code>aside</code> i peu de pàgina o <code>footer</code>.</p>
+<h2 id="2-planificacio-i-disseny">2. Planificació i disseny</h2>
+<p>Les diferents fases del <strong>prototipat web són:</strong> esbós (<code>sketch</code>), esquema de pàgina (<code>wireframe</code>), maqueta (<code>mockup</code>) i prototip (<code>prototype</code>). En anglés es coneix a aquest procés com <code>SWMP</code>, tal com es pot veure en la següent figura.</p>
+<p><img alt="Exemple SWMP" src="../img/SWMP.png" /></p>
+<h3 id="21-mapes">2.1 Mapes</h3>
+<p>Un mapa conceptual és una representació gràfica en forma d'esquema de les idees principals extretes sobre la base d'un objecte d'estudi.</p>
+<p>Aquest diagrama permet jerarquitzar la informació i establir les relacions que existeixen entre les diferents idees i conceptes extrets.</p>
+<p><img alt="Mapa conceptual" src="../img/ejemplo-mapa-conceptual-2.jpg" /></p>
+<p>El mapa de navegació o <code>sitemap</code> mostra l'arquitectura de la pàgina web.</p>
+<p><img alt="Mapa de navegació" src="../img/mapa-del-sitio.png" /></p>
+<blockquote>
+<p>En <a href="https://gitmind.com/es/generador-de-mapa-de-sitio.html">aquest enllaç</a> tens una llista de llocs per a generar mapes de navegació.</p>
+</blockquote>
+<h3 id="22-esbos">2.2 Esbós</h3>
+<p>Un "esbós" o "sketch" en el procés de disseny d'una interfície web és una representació visual molt simple i de baixa fidelitat d'una idea o concepte de disseny. Aquests esbossos es realitzen típicament a mà amb l'ús de llibretes, paper, bolígrafs o altres eines de dibuix i no tenen detalls elaborats com colors, fonts o elements visuals.</p>
+<p>Els esbossos serveixen com a primer pas en la conceptualització i planificació d'una interfície web i tenen diverses finalitats importants:</p>
+<ul>
+<li>
+<p><strong>Exploració d'Idees:</strong> Els dissenyadors utilitzen esbossos per brainstorming i explorar diverses opcions de disseny sense invertir temps en detalls intricats.</p>
+</li>
+<li>
+<p><strong>Captació Ràpida de Conceptes:</strong> Els esbossos permeten captar ràpidament la idea principal d'una interfície sense distraccions.</p>
+</li>
+<li>
+<p><strong>Prova de Concepte:</strong> Es poden mostrar esbossos als clients o als membres de l'equip per obtenir retroalimentació inicial i validar idees de disseny abans de continuar amb fases més avançades.</p>
+</li>
+<li>
+<p><strong>Iteració Ràpida:</strong> Com que es realitzen a mà i no requereixen eines digitals, els esbossos permeten canvis ràpids i iteracions en el disseny.</p>
+</li>
+<li>
+<p><strong>Comunicació d'Idees:</strong> Els esbossos serveixen per comunicar les intencions de disseny a altres membres de l'equip o clients de manera senzilla i comprensible.</p>
+</li>
+<li>
+<p><strong>Focus en l'Estructura i Disposició:</strong> Els esbossos es centren principalment en l'estructura i la disposició dels elements de la interfície, com la ubicació dels botons, els blocs de text, les àrees de contingut, etc.</p>
+</li>
+<li>
+<p><strong>Estalvi de Temps:</strong> Com que els esbossos es creen ràpidament, permeten als dissenyadors provar múltiples opcions sense passar moltes hores en cada una d'elles.</p>
+</li>
+</ul>
+<p>Un esbós pot ser tan simple com una sèrie de rectangles que indiquen on es trobaran els diferents elements en una pàgina web. A mesura que el disseny evoluciona i es refina, els esbossos es poden convertir en wireframes (esquemes) més detallats i posteriorment en mockups o prototips d'alta fidelitat.</p>
+<h3 id="23-wireframe">2.3 Wireframe</h3>
+<p>Representa l'estructura jeràrquica de la pàgina. Pots utilitzar eines com <a href="https://wireframe.cc/">aquesta</a>.</p>
+<p><img alt="Exemple de Wireframe" src="../img/wireframe.png" /></p>
+<h3 id="24-mockup">2.4 Mockup</h3>
+<p>Un "mockup" en el procés de disseny d'una interfície web és una representació visual estàtica i detallada d'una pàgina web o una aplicació que mostra com serà l'aspecte i la disposició dels elements en la interfície final. Els mockups es creen utilitzant eines de disseny gràfic i solen ser molt més elaborats i específics que els esbossos. Aquests mockups són una etapa més avançada del procés de disseny i s'utilitzen per comunicar amb detall com serà la interfície abans de passar a la fase de desenvolupament.</p>
+<p>Un exemple d'un mockup d'una pàgina web podria ser el següent:</p>
+<p><img alt="Exemple de Mockup" src="../img/mockups.png" /></p>
+<blockquote>
+<p><a href="mockflow.com">Ací</a> disposes d'una eina per a elaborar <code>mockups</code>.</p>
+</blockquote>
+<h3 id="25-prototip">2.5 Prototip</h3>
+<p>El prototip és la representació més detallada de la web i disposa d'interactivitat per a comprovar el comportament i l'experiència d'usuari. És, per tant, un disseny al més alt detall i l'última fase de conceptualització abans de la implementació web. </p>
+<p><img alt="Creant un prototip" src="../img/prototip.png" /></p>
+<p><a href="https://quiqueqal.es/prototipo-diseno-web-y-porque-hacerlo/">Aquest article</a> és un bon resum de les fases que hem estudiat.</p>
+<blockquote>
+<p><a href="proto.io">Ací</a> tens una eina per a desenvolupar prototips.</p>
+</blockquote>
+<h3 id="26-guies-destil">2.6 Guies d'estil</h3>
+<p>Les guies d'estils web són conjunts de regles i directrius que estableixen com es deuria dissenyar i desenvolupar un lloc web per a assegurar coherència, accessibilitat i facilitat d'ús. Hi ha diverses guies d'estils web reconegudes i populars, i les principals varien en funció de l'organització i les necessitats específiques. Algunes de les guies d'estils web més importants inclouen:</p>
+<ul>
+<li>
+<p><strong>Guia d'Estil de Material Design:</strong> Desenvolupada per Google, aquesta guia d'estil ofereix directrius per a dissenyar aplicacions web i mòbils amb un aspecte i comportament coherents. Es centra en la simplicitat, la usabilitat i l'ús de components de disseny específics.</p>
+</li>
+<li>
+<p><strong>Guia d'Estil d'Apple Human Interface:</strong> Aquesta guia d'estil és específica per a les plataformes d'Apple, com iOS i macOS. Ofereix orientacions sobre la interfície d'usuari, icones, fonts i altres elements de disseny que s'han de seguir per proporcionar una experiència d'usuari coherent en els dispositius Apple.</p>
+</li>
+<li>
+<p><strong>Guia d'Estil de Bootstrap:</strong> Bootstrap és un framework de disseny web molt popular que inclou una guia d'estil pròpia. Proporciona una base consistent per a dissenyar llocs web i aplicacions amb un enfocament en la responsivitat i l'ús d'components reutilitzables.</p>
+</li>
+<li>
+<p><strong>Guia d'Estil d'IBM Design Language:</strong> Aquesta guia d'estil està destinada a crear experiències de disseny coherents per als productes i serveis d'IBM. Inclou directrius per a l'ús de colors, fonts, components i l'accessibilitat.</p>
+</li>
+<li>
+<p><strong>Guia d'Estil WCAG (Web Content Accessibility Guidelines):</strong> Aquesta guia d'estil està enfocada en assegurar que els llocs web siguin accessibles per a tothom, incloent-hi persones amb discapacitats. Proporciona directrius específiques per garantir la conformitat amb les normatives d'accessibilitat web.</p>
+</li>
+<li>
+<p><strong>Guia d'Estil Nielsen Norman Group:</strong> L'empresa Nielsen Norman Group és una autoritat en usabilitat i proporciona directrius de disseny web basades en les seves investigacions. Aquesta guia ofereix consells i recomanacions per millorar la usabilitat i l'experiència de l'usuari.</p>
+</li>
+<li>
+<p><strong>Guia d'Estil d'Adobe XD:</strong> Aquesta guia ofereix recursos per a dissenyadors que utilitzen Adobe XD, una eina de disseny i prototipatge d'interfícies d'usuari. Inclou plantilles, fonts i components per agilitzar el procés de disseny.</p>
+</li>
+<li>
+<p><strong>Guia d'Estil de Wikimedia Foundation:</strong> Aquesta guia d'estil està destinada a la creació de contingut per als projectes de Wikimedia, com la Viquipèdia. Ofereix directrius sobre com formatar i estructurar el contingut de manera coherent.</p>
+</li>
+<li>
+<p><strong>Guia d'Estil de la BBC:</strong> La British Broadcasting Corporation (BBC) té una guia d'estil que abasta el disseny web, el contingut i les eines de desenvolupament per a les seves plataformes en línia. És coneguda per les seves directrius específiques sobre accessibilitat.</p>
+</li>
+</ul>
+<p>Cada guia d'estil té les seves pròpies regles i recomanacions específiques que poden adaptar-se a les necessitats i la identitat de l'organització. L'elecció d'una guia d'estil i la seva implementació depenen dels objectius del projecte i de les preferències de l'equip de desenvolupament i disseny.</p>
+<blockquote>
+<p>Si vols aprofundir pots consultar la guia <strong>Material Design</strong> <a href="https://m3.material.io/">ací</a>.</p>
+</blockquote>
+<h2 id="3-desenvolupament-de-la-interficie-web">3. Desenvolupament de la interfície web</h2>
+<h3 id="31-llenguatges">3.1 Llenguatges</h3>
+<p>Per a la creació d'interfícies web, es fan servir diversos llenguatges i tecnologies. Aquí tens una llista dels llenguatges i tecnologies més comuns utilitzats en el desenvolupament d'interfícies web:</p>
+<ul>
+<li>
+<p><strong>HTML (Hypertext Markup Language):</strong> És el llenguatge principal utilitzat per definir l'estructura i el contingut d'una pàgina web. HTML es fa servir per crear text, imatges, enllaços, taules, formularis i altres elements que es mostren en una pàgina web.</p>
+</li>
+<li>
+<p><strong>CSS (Cascading Style Sheets):</strong> CSS es fa servir per definir l'estil i la presentació d'una pàgina web. Permet especificar coses com els colors, fonts, marges, espaiat, fondos i altres aspectes visuals d'una pàgina web. També és utilitzat per a fer que una pàgina sigui responsiva i s'adapti a diferents dispositius i resolucions.</p>
+</li>
+<li>
+<p><strong>JavaScript:</strong> JavaScript és un llenguatge de programació que es fa servir per afegir interactivitat i comportament dinàmic a una pàgina web. Amb JavaScript, es poden crear funcions, validar formularis, realitzar animacions, carregar contingut dinàmic i comunicar-se amb servidors per a dades en temps real.</p>
+</li>
+<li>
+<p><strong>jQuery:</strong> jQuery és una biblioteca JavaScript que simplifica la manipulació del DOM (Document Object Model) i l'execució de tasques comunes en desenvolupament web, com l'acció en resposta a esdeveniments de l'usuari.</p>
+</li>
+<li>
+<p><strong>TypeScript:</strong> TypeScript és una extensió de JavaScript que afegeix tipatge estàtic opcional i altres funcionalitats a la llengua. És utilitzat per millorar la mantinguda i la gestió de codi JavaScript en projectes grans.</p>
+</li>
+<li>
+<p><strong>React:</strong> React és una llibreria JavaScript desenvolupada per Facebook que es fa servir per crear interfícies d'usuari d'alta qualitat i components reutilitzables. És especialment popular per a desenvolupament d'aplicacions d'una sola pàgina (SPA).</p>
+</li>
+<li>
+<p><strong>Angular:</strong> Angular és un framework de JavaScript mantingut per Google que ofereix un enfocament complet per al desenvolupament d'aplicacions web. Proporciona eines per a la gestió d'estat, enrutament i una gran quantitat de funcionalitats.</p>
+</li>
+<li>
+<p><strong>Vue.js:</strong> Vue.js és un framework JavaScript progressiu que es fa servir per crear interfícies d'usuari modulars i reactives. És conegut per la seva simplicitat i flexibilitat.</p>
+</li>
+<li>
+<p><strong>Sass i Less:</strong> Sass i Less són pre-processadors CSS que ofereixen característiques addicionals com variables, mixins i funcions per a simplificar i millorar la gestió dels estils CSS.</p>
+</li>
+<li>
+<p><strong>WebAssembly (Wasm):</strong> WebAssembly és un format binari que permet executar codi de màquina de baix nivell en navegadors web, obrint la porta a aplicacions web altament rendibles i de gran rendiment.</p>
+</li>
+</ul>
+<p>Aquests són alguns dels llenguatges i tecnologies més utilitzats per a la creació d'interfícies web. El desenvolupament web actual sovint implica una combinació d'aquests llenguatges i eines per crear experiències web interactives i atractives.</p>
+<h3 id="32-frameworks-css">3.2 Frameworks CSS</h3>
+<p>Els frameworks de CSS són conjunts de regles, estils predefinits i components reutilitzables que faciliten el disseny i la creació de llocs web de manera més eficient. A continuació, es mostren alguns dels principals frameworks de CSS que són populars en el desenvolupament web:</p>
+<ul>
+<li>
+<p><strong>Bootstrap:</strong> Bootstrap és un dels frameworks de CSS més populars i ampliament utilitzats. Desenvolupat per Twitter, ofereix una col·lecció completa de components, com botons, barres de navegació, caixes de diàleg, formularis i molt més. Bootstrap també té una xarxa de mòbils totalment responsiva i una gran comunitat de desenvolupadors que ofereixen suport i recursos addicionals.</p>
+</li>
+<li>
+<p><strong>Foundation:</strong> Foundation és un framework CSS altament personalitzable que ofereix una àmplia gamma de components i utilitats per a la creació de llocs web i aplicacions. És conegut per la seva flexibilitat i la seva capacitat per adaptar-se a diferents tipus de projectes.</p>
+</li>
+<li>
+<p><strong>Bulma:</strong> Bulma és un framework CSS minimalista que ofereix una estructura lleugera i fàcil de personalitzar per als teus projectes web. Es basa en un sistema de graella flexible i utilitza classes senzilles per a estil i disposició.</p>
+</li>
+<li>
+<p><strong>Materialize CSS:</strong> Basat en el disseny de Material Design de Google, Materialize CSS proporciona una col·lecció de components i estils basats en la filosofia de disseny de Material Design. És una opció popular per a crear aplicacions web i llocs amb un aspecte modern i atractiu.</p>
+</li>
+<li>
+<p><strong>Tailwind CSS:</strong> Tailwind CSS és un framework CSS diferent, ja que es centra en proporcionar classes utilitàries per aplicar estils directament al codi HTML. Això permet una gran flexibilitat i personalització, ja que pots crear dissenys i estils de manera molt específica mitjançant classes.</p>
+</li>
+<li>
+<p><strong>Semantic UI:</strong> Semantic UI es basa en una sintaxi semàntica que fa que sigui més fàcil de llegir i comprendre el codi HTML. Ofereix una col·lecció de components amb noms semàntics i estils moderns.</p>
+</li>
+<li>
+<p><strong>Ant Design:</strong> Ant Design és un framework CSS i d'UI popular desenvolupat per Alibaba. Està dissenyat específicament per a aplicacions empresarials i ofereix una gran varietat de components i recursos per a la creació d'interfícies d'usuari.</p>
+</li>
+<li>
+<p><strong>UIKit:</strong> UIKit és un framework CSS creat per YOOtheme i està especialment orientat a la creació de llocs web amb Joomla i WordPress. Ofereix un conjunt de components estilitzats i un sistema de graella flexible.</p>
+</li>
+<li>
+<p><strong>Pure CSS:</strong> Pure CSS és un framework CSS extremadament petit i lleuger creat per Yahoo. Està dissenyat per proporcionar estils bàsics i components comuns sense afegir massa pes a la pàgina.</p>
+</li>
+<li>
+<p><strong>Tailwind CSS:</strong> Tailwind CSS és un framework CSS que es centra en utilitzar classes utilitàries per a la creació de dissenys. És altament personalitzable i permet als desenvolupadors crear estils i dissenys ràpidament mitjançant l'ús de classes CSS directament al codi HTML.</p>
+</li>
+</ul>
+<p>La elecció del framework de CSS dependrà de les necessitats del projecte, el nivell d'expertesa del desenvolupador i els objectius de disseny. Cada framework té les seves pròpies característiques i avantatges, i pot ser útil explorar-los i provar-los per veure quin millor s'ajusta al teu projecte.</p>
+<blockquote>
+<p>El framework que utilitzarem durant el curs serà <code>Bootstrap</code>, donat que és el més popular i el més utilitzat.</p>
+</blockquote>
+<h3 id="33-editors">3.3 Editors</h3>
+<p>Un editor <code>WYSIWYG</code> (de l'anglés <strong>What You See Is What You Get</strong>, que significa "el que es veu és el que s'obté") és un tipus d'editor <code>HTML</code> que permet modificar la pàgina web en una vista simplificada sense codi similar al disseny de pàgina real.</p>
+<blockquote>
+<p>Un exemple d'editor online d'aquest tipus, on pots editar a la vegada <code>html</code>, <code>css</code> i <code>javascript</code> és <a href="https://codepen.io/pen/">aquest</a></p>
+</blockquote>
+<h3 id="34-html5-semantica">3.4 HTML5 semàntica</h3>
+<p>HTML5 va introduir una sèrie d'etiquetes específiques destinades a descriure millor el tipus de contingut que conté una pàgina web, cosa que fa que el codi sigui més significatiu per als navegadors i per a altres desenvolupadors.</p>
+<p>Alguns dels elements semàntics més importants i comuns a HTML5 inclouen:</p>
+<p><code>&lt;header&gt;</code>: Utilitzat per a la capçalera d'una pàgina o secció. Conté elements com el logotip, el títol de la pàgina, la barra de navegació i altres informacions d'introducció.</p>
+<p><code>&lt;nav&gt;</code>: Utilitzat per a definir una secció de navegació o un menú principal. Conté enllaços a altres pàgines o seccions del lloc.</p>
+<p><code>&lt;article&gt;</code>: Utilitzat per a encapsular un contingut independent i autònom dins d'una pàgina web, com ara una entrada de blog o una notícia.</p>
+<p><code>&lt;section&gt;</code>: Utilitzat per a agrupar contingut relacionat dins d'una pàgina. Ajuda a definir divisions lògiques d'una pàgina web.</p>
+<p><code>&lt;aside&gt;</code>: Utilitzat per a contingut secundari o informatiu que és relacionat amb el contingut principal, però no és essencial per a la comprensió d'aquest.</p>
+<p><code>&lt;main&gt;</code>: Defineix el contingut principal d'una pàgina web. Normalment hi ha només un element <code>&lt;main&gt;</code> per pàgina.</p>
+<p><code>&lt;footer&gt;</code>: Utilitzat per a la peça de peu d'una pàgina, que pot contenir informació com drets d'autor, enllaços a pàgines relacionades i altres elements similars.</p>
+<p><code>&lt;figure&gt;</code> i <code>&lt;figcaption&gt;</code>: Utilitzats per a incloure imatges, gràfics o altres continguts multimèdia, juntament amb una llegenda descriptiva.</p>
+<p><code>&lt;time&gt;</code>: Utilitzat per a representar dates i hores de manera semàntica. Pot ser útil per als motors de cerca i per a la interpretació de dades temporals.</p>
+<p>L'ús adequat d'aquests elements semàntics ajuda els motors de cerca a comprendre millor el contingut d'una pàgina i millora l'accessibilitat per als usuaris amb lectores de pantalla i altres tecnologies d'assistència. També facilita la comprensió del codi per part d'altres desenvolupadors i ajuda a mantenir un codi HTML net i estructurat. </p>
+<blockquote>
+<p><code>HTML5</code> semàntic promou les millors pràctiques de disseny i desenvolupament web per a crear pàgines web més riques i accessibles.</p>
+</blockquote>
+<h2 id="4-eines-de-programari">4. Eines de programari</h2>
+<h3 id="41-entorns-de-desenvolupament">4.1 Entorns de desenvolupament</h3>
+<p>Hi ha diversos entorns de desenvolupament (IDEs, per les seves sigles en anglès) que són populars entre els desenvolupadors web. La elecció de l'entorn depèn de les preferències personals i de les necessitats del projecte.</p>
+<ul>
+<li>
+<p><strong>Visual Studio Code (VS Code):</strong> És un IDE lleuger i altament personalitzable creat per Microsoft. És extremadament popular en el desenvolupament web gràcies a la seva gran comunitat i a les nombroses extensions disponibles que ofereixen suport per a diferents llenguatges i frameworks web.</p>
+</li>
+<li>
+<p><strong>Sublime Text:</strong> Aquest és un editor de text ràpid i altament personalitzable amb una gran base d'usuaris en el desenvolupament web. Ofereix ressaltat de sintaxi per a molts llenguatges i moltes extensions.</p>
+</li>
+<li>
+<p><strong>Atom:</strong> Desenvolupat per GitHub, Atom és un editor de text gratuït i de codi obert. Té una comunitat activa i és conegut pel seu ecosistema de paquets que permeten afegir funcionalitats addicionals.</p>
+</li>
+<li>
+<p><strong>WebStorm:</strong> Aquest IDE està especialment dissenyat per al desenvolupament web i està orientat a JavaScript, HTML i CSS. És una elecció popular per als desenvolupadors que utilitzen JavaScript o els frameworks associats com Angular o React.</p>
+</li>
+<li>
+<p><strong>Eclipse:</strong> Eclipse és un IDE que s'utilitza àmpliament en el desenvolupament Java, però també es pot configurar per al desenvolupament web mitjançant la instal·lació d'extensions com Eclipse IDE for Java EE Developers.</p>
+</li>
+<li>
+<p><strong>PHPStorm:</strong> Aquest IDE està destinat específicament al desenvolupament de PHP i aplicacions web relacionades amb PHP. Ofereix eines avançades per a la depuració i el desenvolupament PHP.</p>
+</li>
+<li>
+<p><strong>Brackets:</strong> És un editor de text de codi obert creat per Adobe, dissenyat específicament per a desenvolupadors web. Té una interfície neta i ofereix funcionalitats específiques per a HTML, CSS i JavaScript.</p>
+</li>
+<li>
+<p><strong>NetBeans:</strong> Aquest és un IDE de codi obert que és àmpliament utilitzat per al desenvolupament de Java, però també ofereix suport per al desenvolupament web mitjançant plugins.</p>
+</li>
+<li>
+<p><strong>Komodo IDE:</strong> És una opció versàtil que ofereix suport per a diversos llenguatges de programació, inclosos els utilitzats en el desenvolupament web com JavaScript, Python, Ruby i altres.</p>
+</li>
+<li>
+<p><strong>Notepad++:</strong> Aquest és un editor de text lleuger i gratuït per a Windows que és popular entre els desenvolupadors web per la seva simplicitat i rendiment.</p>
+</li>
+</ul>
+<p>La elecció de l'entorn de desenvolupament depèn de factors com el llenguatge de programació que utilitzis, la teva experiència personal i les preferències. Molts desenvolupadors web utilitzen múltiples IDEs segons les necessitats del projecte.</p>
+<blockquote>
+<p>Durant aquest curs utilitzarem el <code>Visual Studio Code</code> preferiblement sobre un Sistema Operatiu de tipus <code>Linux</code>.</p>
+</blockquote>
+<p><a href="https://noviello.it/es/como-instalar-visual-studio-code-en-ubuntu-22-04/">Ací</a> tens un tutorial de com instal·lar el <code>Visual Studio Code</code> en <code>Ubuntu 22.04</code>.</p>
+<h3 id="42-git">4.2 Git</h3>
+<p><code>Git</code> és un sistema de control de versions ampliament utilitzat per al seguiment de canvis en el codi font i la col·laboració en desenvolupament de programari. Aquí tens una llista de comandaments bàsics de Git:</p>
+<p><code>git init:</code> Crea un nou repositori Git buit a la carpeta actual.</p>
+<p><code>git clone [URL]:</code> Clona un repositori Git existent des d'una URL remota a la carpeta local.</p>
+<p><code>git add [fitxers]:</code> Afegeix canvis o fitxers nous a l'àrea d'etiquetatge (staging area) per a la preparació de la comanda de commit.</p>
+<p><code>git commit -m "[missatge]":</code> Realitza un commit amb els canvis de l'àrea d'etiquetatge i associa un missatge descriptiu que expliqui els canvis realitzats.</p>
+<p><code>git status:</code> Mostra l'estat actual del repositori, incloent els canvis pendents d'etiquetar i els canvis sense seguiment.</p>
+<p><code>git log</code>: Mostra un històric de commits del repositori, incloent els autors, dates i missatges de commit.</p>
+<p><code>git branch</code>: Llista totes les branques del repositori i destaca la branca actual.</p>
+<p><code>git checkout [branca]</code>: Canvia a una branca diferent (existent o nova) o a un commit específic.</p>
+<p><code>git merge [branca]</code>: Fusiona els canvis d'una branca específica a la branca actual.</p>
+<p><code>git pull</code>: Actualitza la branca actual amb els canvis més recents del repositori remot.</p>
+<p><code>git push</code>: Pusheja els canvis de la branca actual al repositori remot.</p>
+<p><code>git remote -v</code>: Mostra una llista de tots els repositoris remots configurats.</p>
+<p><code>git fetch</code>: Descarrega canvis des de l'origen, però no els fusiona automàticament amb la branca actual.</p>
+<p><code>git reset [fitxers]</code>: Desfà els canvis d'etiquetatge (staging area) i els fitxers modificats al seu estat anterior al darrer commit.</p>
+<p><code>git rm [fitxer]</code>: Elimina un fitxer del repositori i registra el canvi.</p>
+<p><code>git diff</code>: Mostra les diferències entre l'àrea de treball i l'últim commit.</p>
+<p><code>git remote add [nom] [URL]</code>: Afegeix un repositori remot amb un nom i una URL associats.</p>
+<p>Aquests són els comandaments bàsics de Git que t'ajudaran a gestionar un repositori. Hi ha molts altres comandaments i opcions disponibles que et permeten realitzar tasques més avançades i específiques en Git. Pots utilitzar <code>git --help</code> o <code>git [comandament] --help</code> per obtenir informació detallada sobre qualsevol comandament específic.</p>
+<blockquote>
+<p>En els apunts del mòdul disposes d'un tutorial més extens de <code>git</code></p>
+</blockquote>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "content.code.copy", "content.code.annotate", "content.code.select"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
