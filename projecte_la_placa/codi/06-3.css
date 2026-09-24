@@ -1,0 +1,48 @@
+.franja {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-height: 40rem;
+  margin-block: 5rem;
+  padding: 5rem 8%;
+  isolation: isolate;
+  color: white;
+  background-image: linear-gradient(90deg, #211334e8 0%, #21133475 65%, #21133435), url("../img/placa-vesprada.svg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 1rem;
+}
+
+.franja__contingut {
+  max-width: 40rem;
+}
+
+.franja h2 {
+  font-size: clamp(2.3rem, 4.5vw, 4rem);
+  margin-block: 1.4rem;
+}
+
+.franja h2 em {
+  font-family: Georgia, serif;
+  color: var(--llima);
+  font-weight: 500;
+}
+
+.franja p:not(.antetitol) {
+  max-width: 30rem;
+  color: #eee6f5;
+  margin-bottom: 2rem;
+}
+
+.franja a:focus-visible {
+  outline-color: var(--llima);
+}
+
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .franja {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 47.999rem) { .franja { min-height: 34rem; padding: 3rem 1.5rem; margin-block: 3rem; background-attachment: scroll; } }

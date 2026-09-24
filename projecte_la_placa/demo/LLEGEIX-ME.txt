@@ -1,0 +1,7 @@
+LA PLAÇA · PROJECTE GUIAT DIW
+Obri index.html amb el navegador. No cal instal·lar dependències.
+Les tres pàgines i els recursos funcionen localment.
+Esdeveniment fictici. Canvia textos i disseny per justificar les teues decisions.
+La il·lustració cartell.svg és original d’aquest material; es permet usar-la i modificar-la en els projectes de classe.
+Conserva les carpetes css i img al mateix nivell que index.html.
+Consulta la documentació de la fase abans d'utilitzar la solució de referència.

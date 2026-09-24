@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programa · La Plaça</title>
+  <link rel="stylesheet" href="css/estils.css">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <script src="js/navegacio.js" defer></script>
+</head>
+<body>
+<a class="salt" href="#contingut">Salta al contingut</a>
+<header class="capcalera">
+  <div class="contenidor capcalera__interior">
+    <a class="marca" href="index.html" aria-label="La Plaça · Inici">
+      <img src="img/logo.svg" alt="" width="48" height="48">
+      <span>la plaça<span class="marca__subtitol">CULTURA DE BARRI</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" hidden>
+      <span class="hamburguesa" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="menu-toggle__text">Menú</span>
+    </button>
+    <nav id="menu-principal" class="menu-panel" aria-label="Principal">
+      <ul class="menu">
+        <li><a href="index.html">Inici</a></li>
+        <li>
+          <details class="menu-desplegable actiu">
+            <summary>Programa <span class="fletxa" aria-hidden="true"></span></summary>
+            <div class="submenu">
+              <p class="submenu__titol">TRIA EL TEU PLA</p>
+              <a href="programa.html" aria-current="page"><span>Tot el programa</span><small>Sis propostes per viure el barri</small></a>
+              <a href="programa.html#horaris"><span>Horaris del dia</span><small>Organitza la teua visita</small></a>
+              <a href="programa.html#activitats"><span>Descobreix les activitats</span><small>Art, música, cinema i més</small></a>
+            </div>
+          </details>
+        </li>
+        <li><a href="informacio.html">La teua visita</a></li>
+        <li><a class="menu__accio" href="programa.html#horaris">15 maig ’27 <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="contingut" class="contenidor"><p class="antetitol pagina-antetitol">SIS PLANS, UN MATEIX PUNT DE TROBADA</p><h1 class="pagina-titol">Programa d’activitats</h1><p>Tria una activitat i organitza la teua jornada.</p>
+<section aria-labelledby="horaris"><h2 id="horaris">Horaris</h2>
+<div class="taula-scroll" role="region" aria-labelledby="horaris" tabindex="0">
+<table><caption>Programació del 15 de maig de 2027</caption>
+<thead><tr><th scope="col">Hora</th><th scope="col">Activitat</th><th scope="col">Espai</th></tr></thead>
+<tbody><tr><th scope="row">10:00</th><td><a href="#taller-cartells">Taller de cartells</a></td><td>Aula creativa</td></tr><tr><th scope="row">11:00</th><td><a href="#ruta-art">Ruta d’art urbà</a></td><td>Punt de trobada</td></tr><tr><th scope="row">12:00</th><td><a href="#lectura">Lectura compartida</a></td><td>Biblioteca</td></tr><tr><th scope="row">16:00</th><td><a href="#fotografia">Fotografia del barri</a></td><td>Punt de trobada</td></tr><tr><th scope="row">18:00</th><td><a href="#concert">Concert a la plaça</a></td><td>Escenari</td></tr><tr><th scope="row">20:00</th><td><a href="#cinema">Cinema a la fresca</a></td><td>Pati cultural</td></tr></tbody></table></div></section>
+<section aria-labelledby="activitats"><h2 id="activitats">Descobreix les activitats</h2>
+<div class="graella"><article class="targeta" id="taller-cartells">
+  <img src="img/cartell.svg" alt="" width="640" height="360">
+  <div class="targeta__cos">
+    <span class="etiqueta">Destacada</span>
+    <h3>Taller de cartells</h3>
+    <p>Crea un cartell a partir de formes, colors i tipografia.</p>
+    <p><strong>10:00</strong> · Aula creativa</p>
+    <a href="informacio.html#arribar">Com arribar a aquesta activitat</a>
+  </div>
+</article><article class="targeta" id="ruta-art">
+  <img src="img/cartell.svg" alt="" width="640" height="360">
+  <div class="targeta__cos">
+    
+    <h3>Ruta d’art urbà</h3>
+    <p>Descobreix les obres i les històries del barri.</p>
+    <p><strong>11:00</strong> · Punt de trobada</p>
+    <a href="informacio.html#arribar">Com arribar a aquesta activitat</a>
+  </div>
+</article><article class="targeta" id="lectura">
+  <img src="img/cartell.svg" alt="" width="640" height="360">
+  <div class="targeta__cos">
+    
+    <h3>Lectura compartida</h3>
+    <p>Comparteix un fragment del teu llibre preferit.</p>
+    <p><strong>12:00</strong> · Biblioteca</p>
+    <a href="informacio.html#arribar">Com arribar a aquesta activitat</a>
+  </div>
+</article><article class="targeta" id="fotografia">
+  <img src="img/cartell.svg" alt="" width="640" height="360">
+  <div class="targeta__cos">
+    
+    <h3>Fotografia del barri</h3>
+    <p>Observa la llum i documenta els espais quotidians.</p>
+    <p><strong>16:00</strong> · Punt de trobada</p>
+    <a href="informacio.html#arribar">Com arribar a aquesta activitat</a>
+  </div>
+</article><article class="targeta" id="concert">
+  <img src="img/cartell.svg" alt="" width="640" height="360">
+  <div class="targeta__cos">
+    
+    <h3>Concert a la plaça</h3>
+    <p>Escolta una selecció de grups locals.</p>
+    <p><strong>18:00</strong> · Escenari</p>
+    <a href="informacio.html#arribar">Com arribar a aquesta activitat</a>
+  </div>
+</article><article class="targeta" id="cinema">
+  <img src="img/cartell.svg" alt="" width="640" height="360">
+  <div class="targeta__cos">
+    
+    <h3>Cinema a la fresca</h3>
+    <p>Tanca la jornada amb una projecció comentada.</p>
+    <p><strong>20:00</strong> · Pati cultural</p>
+    <a href="informacio.html#arribar">Com arribar a aquesta activitat</a>
+  </div>
+</article></div></section></main>
+<footer class="peu"><div class="contenidor peu__interior"><a class="marca" href="index.html"><img src="img/logo.svg" alt="" width="48" height="48"><span>la plaça<span class="marca__subtitol">EL BARRI ÉS CULTURA</span></span></a><div><p>Ens trobem el 15 de maig.</p><p class="peu__nota">Projecte educatiu de DIW · Esdeveniment fictici.<br>Il·lustracions originals del material docent.</p></div><a href="informacio.html#arribar">Com arribar <span aria-hidden="true">↗</span></a></div></footer>
+</body>
+</html>

@@ -1,0 +1,150 @@
+a:focus-visible, button:focus-visible, summary:focus-visible, .taula-scroll:focus-visible {
+  outline: 3px solid #8855cf;
+  outline-offset: 5px;
+}
+
+.targeta {
+  position: relative;
+  min-width: 0;
+  background: #fff;
+  border: 1px solid var(--vora);
+  border-radius: .9rem;
+  box-shadow: 0 .25rem .75rem #30205205;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.targeta > img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: .85rem .85rem 0 0;
+}
+
+.targeta__cos {
+  padding: 1.5rem;
+}
+
+.targeta h3 {
+  margin: .25rem 0 1rem;
+}
+
+.targeta p {
+  font-size: .88rem;
+  color: #6a5e76;
+}
+
+.targeta p strong {
+  color: var(--tinta);
+}
+
+.targeta__cos > a {
+  font-size: .8rem;
+  font-weight: 750;
+}
+
+.etiqueta {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: .35rem .8rem;
+  border-radius: 3rem;
+  background: var(--llima);
+  font-size: .68rem;
+  font-weight: 800;
+}
+
+.avis {
+  padding: 2rem;
+  border: 1px solid var(--vora);
+  border-radius: .9rem;
+  background: #f0ebf6;
+}
+
+.avis h2 {
+  font-size: 1.6rem;
+}
+
+.avis--visita {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--llima);
+  border: 0;
+}
+
+.avis--visita h2 {
+  font-size: clamp(1.9rem, 3.5vw, 3rem);
+  margin: 1rem 0;
+}
+
+.avis--visita > p:not(.antetitol) {
+  max-width: 42rem;
+  margin: 1.5rem auto;
+}
+
+.avis--visita > a {
+  font-weight: 750;
+}
+
+.pagina-antetitol {
+  margin-top: 2rem;
+  color: #76539a;
+}
+
+.pagina-titol {
+  margin: 1rem 0;
+}
+
+.pagina-titol + p {
+  margin-bottom: 3rem;
+  color: #6a5e76;
+}
+
+.taula-scroll {
+  overflow-x: auto;
+  border-radius: .8rem;
+  border: 1px solid var(--vora);
+  background: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+  padding: 1.3rem;
+  font-weight: 750;
+  font-size: .85rem;
+}
+
+th, td {
+  border-bottom: 1px solid #eee9f1;
+  text-align: left;
+  padding: 1rem 1.3rem;
+}
+
+thead {
+  background: var(--tinta);
+  color: white;
+  font-size: .8rem;
+}
+
+tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.peu {
+  background: var(--tinta);
+  color: white;
+  padding: 3.5rem 0;
+}
+
+.peu__nota {
+  font-size: .7rem;
+  color: #d7cce5;
+}
+
+.peu a:focus-visible {
+  outline-color: var(--llima);
+}

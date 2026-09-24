@@ -1,0 +1,188 @@
+/* Demo de disseny en revisió · La Plaça */
+:root {
+  --tinta: #302052;
+  --violeta: #6945bd;
+  --paper: #faf8f2;
+  --llima: #e9ff86;
+  --vora: #ded8e6;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-padding-top: 7rem; }
+body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.65; color: var(--tinta); background: var(--paper); }
+h1, h2, h3 { line-height: 1.12; letter-spacing: -.035em; }
+h1 { font-size: clamp(2.4rem, 5vw, 4.7rem); }
+h2 { font-size: clamp(1.9rem, 3.4vw, 3rem); margin-top: 0; }
+h3 { font-size: 1.35rem; }
+a { color: inherit; text-underline-offset: .22em; }
+button, summary { font: inherit; }
+button { color: inherit; }
+a:focus-visible, button:focus-visible, summary:focus-visible, .taula-scroll:focus-visible { outline: 3px solid #8855cf; outline-offset: 5px; }
+img { display: block; max-width: 100%; height: auto; }
+.contenidor { width: 90%; max-width: 76rem; margin-inline: auto; }
+main { padding-block: 2.5rem 5rem; }
+section { margin-bottom: 3rem; }
+.antetitol { font-size: .72rem; font-weight: 800; letter-spacing: .13em; }
+.enllac-text { font-weight: 750; text-decoration-thickness: 1px; }
+.boto { display: inline-flex; align-items: center; justify-content: space-between; gap: 1.25rem; padding: 1rem 1.35rem; border-radius: .6rem; background: var(--tinta); color: white; text-decoration: none; font-weight: 750; transition: background-color .2s; }
+.boto:hover { background: var(--violeta); }
+.boto--clar { background: var(--llima); color: var(--tinta); }
+.boto--clar:hover { background: white; }
+/* Navegació comuna: la capçalera continua visible durant el desplaçament. */
+.capcalera { position: sticky; top: 0; z-index: 50; background: var(--tinta); color: white; box-shadow: 0 3px 20px #24153c16; }
+.capcalera__interior { min-height: 6rem; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; position: relative; }
+.marca { display: inline-flex; align-items: center; gap: .8rem; flex-shrink: 0; text-decoration: none; }
+.marca > span { font-size: 1.8rem; line-height: 1; font-weight: 850; letter-spacing: -.07em; }
+.marca__subtitol { display: block; font-size: .54rem; letter-spacing: .18em; margin-top: .6rem; font-weight: 650; }
+.marca img { width: 48px; height: 48px; }
+.menu { display: flex; align-items: center; gap: .4rem; list-style: none; margin: 0; padding: 0; }
+.menu > li > a, .menu-desplegable > summary { display: flex; align-items: center; gap: .75rem; padding: .75rem 1.1rem; text-decoration: none; border-radius: .5rem; font-size: .9rem; font-weight: 650; cursor: pointer; transition: background-color .18s, color .18s; }
+.menu > li > a:hover, .menu-desplegable > summary:hover, .menu-desplegable[open] > summary { background: #ffffff14; }
+.menu > li > a[aria-current], .menu-desplegable.actiu > summary { color: var(--llima); background: #ffffff0b; }
+.menu .menu__accio { margin-left: 1.25rem; background: var(--llima); color: var(--tinta); font-size: .85rem; }
+.menu .menu__accio:hover { background: white; }
+.menu-desplegable { position: relative; }
+.menu-desplegable > summary { list-style: none; }
+.menu-desplegable > summary::-webkit-details-marker { display: none; }
+.fletxa { display: inline-block; width: .45rem; height: .45rem; border-right: 2px solid; border-bottom: 2px solid; transform: rotate(45deg) translateY(-2px); transition: transform .2s; }
+.menu-desplegable[open] .fletxa { transform: rotate(225deg) translate(-2px, -1px); }
+.submenu { position: absolute; top: calc(100% + .85rem); left: 0; width: 19rem; padding: .8rem; border: 1px solid var(--vora); border-radius: .9rem; color: var(--tinta); background: white; box-shadow: 0 20px 50px #30205224; }
+.submenu__titol { padding: .3rem .7rem; font-size: .64rem; letter-spacing: .14em; font-weight: 800; color: #746386; }
+.submenu a { display: block; padding: .8rem; border-radius: .5rem; text-decoration: none; }
+.submenu a:hover, .submenu a:focus-visible { background: #f1edf8; }
+.submenu a[aria-current] { background: #f1edf8; }
+.submenu span { display: block; font-size: .92rem; font-weight: 750; }
+.submenu small { display: block; color: #695b78; font-size: .76rem; margin-top: .15rem; }
+.capcalera a:focus-visible, .capcalera button:focus-visible, .capcalera summary:focus-visible { outline-color: var(--llima); }
+.submenu a:focus-visible { outline-color: var(--violeta); }
+.menu-toggle { display: flex; align-items: center; gap: .65rem; border: 1px solid #ffffff50; border-radius: .5rem; padding: .65rem .8rem; background: transparent; color: white; cursor: pointer; font-size: .8rem; }
+.hamburguesa { display: grid; gap: 5px; width: 20px; }
+.hamburguesa span { display: block; height: 2px; width: 20px; background: currentColor; transition: transform .2s, opacity .2s; }
+.menu-toggle[aria-expanded="true"] .hamburguesa span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] .hamburguesa span:nth-child(2) { opacity: 0; }
+.menu-toggle[aria-expanded="true"] .hamburguesa span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+/* Portada de l’edició: imatge i cartell. */
+.portada { display: grid; gap: 3rem; align-items: center; padding-block: 1.5rem 3rem; margin: 0; }
+.portada .antetitol { display: flex; align-items: center; gap: .6rem; }
+.punt { width: .5rem; height: .5rem; border-radius: 50%; background: #d3523a; flex-shrink: 0; }
+.portada h1 { margin-block: 1.4rem; font-weight: 850; }
+.portada h1 em { font-family: Georgia, serif; font-weight: 500; color: #6945a0; letter-spacing: -.05em; }
+.portada__descripcio { font-size: 1.05rem; max-width: 32rem; color: #6a5e76; }
+.portada__accions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.4rem; margin-top: 2rem; font-size: .85rem; }
+.portada__dades { display: flex; gap: 2rem; margin-top: 2.5rem; font-size: .75rem; color: #72667c; }
+.portada__dades > span { display: flex; align-items: baseline; gap: .55rem; }
+.portada__dades strong { font-size: 1.7rem; letter-spacing: -.05em; color: var(--tinta); }
+.portada__visual { position: relative; min-width: 0; }
+.portada__visual > img { width: 100%; height: 34rem; object-fit: cover; border-radius: 48% 48% .8rem .8rem; }
+.segell { position: absolute; right: -.6rem; top: 1.5rem; width: 8.5rem; height: 8.5rem; background: var(--llima); border-radius: 50%; display: flex; justify-content: center; align-items: center; flex-direction: column; transform: rotate(12deg); border: 1px solid #30205220; }
+.segell span { font-size: .68rem; letter-spacing: .16em; font-weight: 750; }
+.segell strong { font-size: 1.7rem; letter-spacing: -.06em; line-height: 1.2; }
+.peu-visual { display: block; margin-top: .8rem; font-size: .58rem; letter-spacing: .2em; text-align: right; font-weight: 700; }
+.cinta { display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: .7rem 1.5rem; border-block: 1px solid var(--vora); padding: 1.25rem .5rem; font-size: .7rem; font-weight: 800; letter-spacing: .12em; }
+.cinta [aria-hidden] { font-size: 1.5rem; color: var(--violeta); }
+.bloc-destacades { padding-top: 4.5rem; }
+.titol-seccio { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1.5rem; margin-bottom: 2rem; }
+.titol-seccio h2 { margin: .8rem 0 0; }
+.titol-seccio > a { font-size: .85rem; }
+/* Targetes i contingut compartit. */
+.graella { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+.targeta { position: relative; min-width: 0; background: #fff; border: 1px solid var(--vora); border-radius: .9rem; box-shadow: 0 .25rem .75rem #30205205; transition: transform .2s, box-shadow .2s; }
+.targeta:hover, .targeta:focus-within { transform: translateY(-.3rem); box-shadow: 0 .7rem 1.5rem #30205210; }
+.targeta > img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: .85rem .85rem 0 0; }
+.targeta:nth-child(2n) > img { filter: hue-rotate(35deg); }
+.targeta:nth-child(3n) > img { filter: hue-rotate(295deg); }
+.targeta__cos { padding: 1.5rem; }
+.targeta h3 { margin: .25rem 0 1rem; }
+.targeta p { font-size: .88rem; color: #6a5e76; }
+.targeta p strong { color: var(--tinta); }
+.targeta__cos > a { font-size: .8rem; font-weight: 750; }
+.etiqueta { position: absolute; top: 1rem; left: 1rem; padding: .35rem .8rem; border-radius: 3rem; background: var(--llima); font-size: .68rem; font-weight: 800; }
+/* La imatge queda fixada al viewport; el text continua en el flux del document. */
+.franja { position: relative; display: grid; align-items: center; min-height: 40rem; margin-block: 5rem; padding: 5rem 8%; isolation: isolate; color: white; background-image: linear-gradient(90deg, #211334e8 0%, #21133475 65%, #21133435), url('../img/placa-vesprada.svg'); background-position: center; background-size: cover; background-attachment: fixed; border-radius: 1rem; }
+.franja__contingut { max-width: 40rem; }
+.franja h2 { font-size: clamp(2.3rem, 4.5vw, 4rem); margin-block: 1.4rem; }
+.franja h2 em { font-family: Georgia, serif; color: var(--llima); font-weight: 500; }
+.franja p:not(.antetitol) { max-width: 30rem; color: #eee6f5; margin-bottom: 2rem; }
+.franja a:focus-visible { outline-color: var(--llima); }
+.avis { padding: 2rem; border: 1px solid var(--vora); border-radius: .9rem; background: #f0ebf6; }
+.avis h2 { font-size: 1.6rem; }
+.avis--visita { text-align: center; padding: 3rem 2rem; background: var(--llima); border: 0; }
+.avis--visita h2 { font-size: clamp(1.9rem, 3.5vw, 3rem); margin: 1rem 0; }
+.avis--visita > p:not(.antetitol) { max-width: 42rem; margin: 1.5rem auto; }
+.avis--visita > a { font-weight: 750; }
+.pagina-antetitol { margin-top: 2rem; color: #76539a; }
+.pagina-titol { margin: 1rem 0; }
+.pagina-titol + p { margin-bottom: 3rem; color: #6a5e76; }
+.disposicio-info { display: grid; gap: 3rem; align-items: start; }
+.disposicio-info > * { min-width: 0; }
+.disposicio-info section h2 { font-size: 1.8rem; }
+.taula-scroll { overflow-x: auto; border-radius: .8rem; border: 1px solid var(--vora); background: white; }
+table { width: 100%; border-collapse: collapse; }
+caption { text-align: left; padding: 1.3rem; font-weight: 750; font-size: .85rem; }
+th, td { border-bottom: 1px solid #eee9f1; text-align: left; padding: 1rem 1.3rem; }
+thead { background: var(--tinta); color: white; font-size: .8rem; }
+tbody tr:last-child > * { border-bottom: 0; }
+tbody tr:hover { background: #f5f1fa; }
+.disposicio-info details { padding: 1.3rem 0; border-bottom: 1px solid var(--vora); }
+.disposicio-info summary { cursor: pointer; font-weight: 750; }
+.peu { background: var(--tinta); color: white; padding: 3.5rem 0; }
+.peu__interior { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 2rem; }
+.peu__interior p { margin: .3rem 0; }
+.peu__nota { font-size: .7rem; color: #d7cce5; }
+.peu__interior > a:last-child { font-size: .9rem; }
+.peu a:focus-visible { outline-color: var(--llima); }
+.salt { position: fixed; top: .5rem; left: .5rem; transform: translateY(-200%); padding: .75rem; background: white; z-index: 100; }
+.salt:focus { transform: translateY(0); }
+@media (min-width: 48rem) {
+  .graella { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .portada { grid-template-columns: 1.15fr 1fr; }
+}
+@media (min-width: 68rem) {
+  .graella { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .disposicio-info { grid-template-columns: 2fr 1fr; }
+}
+@media (max-width: 55.999rem) {
+  html { scroll-padding-top: 6rem; }
+  .capcalera__interior { min-height: 5rem; flex-wrap: wrap; gap: 0; }
+  .capcalera__interior > .marca { margin-block: 1.1rem; }
+  .marca > span { font-size: 1.55rem; }
+  .marca img { width: 40px; height: 40px; }
+  .marca__subtitol { font-size: .48rem; }
+  .menu-panel { width: 100%; padding: .5rem 0 1.3rem; max-height: calc(100dvh - 5rem); overflow-y: auto; }
+  .menu { flex-direction: column; align-items: stretch; gap: .35rem; }
+  .menu > li > a, .menu-desplegable > summary { padding: .9rem 1rem; justify-content: space-between; }
+  .menu .menu__accio { margin: .5rem 0 0; }
+  .submenu { position: static; width: 100%; margin-block: .5rem; box-shadow: none; }
+  .portada { gap: 2rem; }
+  .portada__visual > img { height: 26rem; }
+  .portada__accions { gap: 1rem; }
+}
+@media (max-width: 47.999rem) {
+  main { padding-top: 1.5rem; }
+  .portada h1 { font-size: clamp(2.6rem, 9.7vw, 4.5rem); }
+  .portada__visual { margin-top: 1rem; }
+  .portada__visual > img { height: 25rem; }
+  .segell { width: 7rem; height: 7rem; top: .5rem; right: 0; }
+  .segell strong { font-size: 1.5rem; }
+  .portada__dades { gap: 1.2rem; }
+  .cinta { font-size: .6rem; gap: .5rem; }
+  .cinta [aria-hidden] { font-size: 1rem; }
+  .bloc-destacades { padding-top: 3rem; }
+  .franja { min-height: 34rem; padding: 3rem 1.5rem; margin-block: 3rem; background-attachment: scroll; }
+  th, td { padding: .8rem .65rem; font-size: .86rem; }
+}
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .franja { background-attachment: scroll; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+  .targeta:hover, .targeta:focus-within { transform: none; }
+}
+@media print {
+  .capcalera, .peu, .salt { display: none; }
+  body { color: #000; background: white; }
+  .contenidor { width: 100%; }
+  .targeta { box-shadow: none; break-inside: avoid; }
+  .franja { color: #000; background: none; min-height: auto; }
+  .franja p:not(.antetitol), .franja h2 em { color: #000; }
+}

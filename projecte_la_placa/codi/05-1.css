@@ -1,0 +1,91 @@
+.capcalera {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--tinta);
+  color: white;
+  box-shadow: 0 3px 20px #24153c16;
+}
+
+.capcalera__interior {
+  min-height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.marca > span {
+  font-size: 1.8rem;
+  line-height: 1;
+  font-weight: 850;
+  letter-spacing: -.07em;
+}
+
+.marca__subtitol {
+  display: block;
+  font-size: .54rem;
+  letter-spacing: .18em;
+  margin-top: .6rem;
+  font-weight: 650;
+}
+
+.marca img {
+  width: 48px;
+  height: 48px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li > a, .menu-desplegable > summary {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .75rem 1.1rem;
+  text-decoration: none;
+  border-radius: .5rem;
+  font-size: .9rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background-color .18s, color .18s;
+}
+
+.menu > li > a:hover, .menu-desplegable > summary:hover, .menu-desplegable[open] > summary {
+  background: #ffffff14;
+}
+
+.menu > li > a[aria-current], .menu-desplegable.actiu > summary {
+  color: var(--llima);
+  background: #ffffff0b;
+}
+
+.menu .menu__accio {
+  margin-left: 1.25rem;
+  background: var(--llima);
+  color: var(--tinta);
+  font-size: .85rem;
+}
+
+.menu .menu__accio:hover {
+  background: white;
+}
+
+.capcalera a:focus-visible, .capcalera button:focus-visible, .capcalera summary:focus-visible {
+  outline-color: var(--llima);
+}

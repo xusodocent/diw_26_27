@@ -1,0 +1,121 @@
+@media (min-width: 48rem) {
+  .graella {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .portada {
+    grid-template-columns: 1.15fr 1fr;
+  }
+}
+
+@media (min-width: 68rem) {
+  .graella {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .disposicio-info {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (max-width: 55.999rem) {
+  html {
+    scroll-padding-top: 6rem;
+  }
+  .capcalera__interior {
+    min-height: 5rem;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .capcalera__interior > .marca {
+    margin-block: 1.1rem;
+  }
+  .marca > span {
+    font-size: 1.55rem;
+  }
+  .marca img {
+    width: 40px;
+    height: 40px;
+  }
+  .marca__subtitol {
+    font-size: .48rem;
+  }
+  .menu-panel {
+    width: 100%;
+    padding: .5rem 0 1.3rem;
+    max-height: calc(100dvh - 5rem);
+    overflow-y: auto;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: stretch;
+    gap: .35rem;
+  }
+  .menu > li > a, .menu-desplegable > summary {
+    padding: .9rem 1rem;
+    justify-content: space-between;
+  }
+  .menu .menu__accio {
+    margin: .5rem 0 0;
+  }
+  .submenu {
+    position: static;
+    width: 100%;
+    margin-block: .5rem;
+    box-shadow: none;
+  }
+  .portada {
+    gap: 2rem;
+  }
+  .portada__visual > img {
+    height: 26rem;
+  }
+  .portada__accions {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 47.999rem) {
+  main {
+    padding-top: 1.5rem;
+  }
+  .portada h1 {
+    font-size: clamp(2.6rem, 9.7vw, 4.5rem);
+  }
+  .portada__visual {
+    margin-top: 1rem;
+  }
+  .portada__visual > img {
+    height: 25rem;
+  }
+  .segell {
+    width: 7rem;
+    height: 7rem;
+    top: .5rem;
+    right: 0;
+  }
+  .segell strong {
+    font-size: 1.5rem;
+  }
+  .portada__dades {
+    gap: 1.2rem;
+  }
+  .cinta {
+    font-size: .6rem;
+    gap: .5rem;
+  }
+  .cinta [aria-hidden] {
+    font-size: 1rem;
+  }
+  .bloc-destacades {
+    padding-top: 3rem;
+  }
+  .franja {
+    min-height: 34rem;
+    padding: 3rem 1.5rem;
+    margin-block: 3rem;
+    background-attachment: scroll;
+  }
+  th, td {
+    padding: .8rem .65rem;
+    font-size: .86rem;
+  }
+}

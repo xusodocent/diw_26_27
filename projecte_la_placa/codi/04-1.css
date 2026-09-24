@@ -1,0 +1,108 @@
+:root {
+  --tinta: #302052;
+  --violeta: #6945bd;
+  --paper: #faf8f2;
+  --llima: #e9ff86;
+  --vora: #ded8e6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html {
+  scroll-padding-top: 7rem;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.65;
+  color: var(--tinta);
+  background: var(--paper);
+}
+
+h1, h2, h3 {
+  line-height: 1.12;
+  letter-spacing: -.035em;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5vw, 4.7rem);
+}
+
+h2 {
+  font-size: clamp(1.9rem, 3.4vw, 3rem);
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.35rem;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: .22em;
+}
+
+button, summary {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.contenidor {
+  width: 90%;
+  max-width: 76rem;
+  margin-inline: auto;
+}
+
+main {
+  padding-block: 2.5rem 5rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.antetitol {
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+}
+
+.enllac-text {
+  font-weight: 750;
+  text-decoration-thickness: 1px;
+}
+
+.boto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1rem 1.35rem;
+  border-radius: .6rem;
+  background: var(--tinta);
+  color: white;
+  text-decoration: none;
+  font-weight: 750;
+  transition: background-color .2s;
+}
+
+.boto--clar {
+  background: var(--llima);
+  color: var(--tinta);
+}

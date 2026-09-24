@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inici · La Plaça</title>
+  <link rel="stylesheet" href="css/estils.css">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <script src="js/navegacio.js" defer></script>
+</head>
+<body>
+<a class="salt" href="#contingut">Salta al contingut</a>
+<header class="capcalera">
+  <div class="contenidor capcalera__interior">
+    <a class="marca" href="index.html" aria-label="La Plaça · Inici">
+      <img src="img/logo.svg" alt="" width="48" height="48">
+      <span>la plaça<span class="marca__subtitol">CULTURA DE BARRI</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" hidden>
+      <span class="hamburguesa" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="menu-toggle__text">Menú</span>
+    </button>
+    <nav id="menu-principal" class="menu-panel" aria-label="Principal">
+      <ul class="menu">
+        <li><a href="index.html" aria-current="page">Inici</a></li>
+        <li>
+          <details class="menu-desplegable">
+            <summary>Programa <span class="fletxa" aria-hidden="true"></span></summary>
+            <div class="submenu">
+              <p class="submenu__titol">TRIA EL TEU PLA</p>
+              <a href="programa.html"><span>Tot el programa</span><small>Sis propostes per viure el barri</small></a>
+              <a href="programa.html#horaris"><span>Horaris del dia</span><small>Organitza la teua visita</small></a>
+              <a href="programa.html#activitats"><span>Descobreix les activitats</span><small>Art, música, cinema i més</small></a>
+            </div>
+          </details>
+        </li>
+        <li><a href="informacio.html">La teua visita</a></li>
+        <li><a class="menu__accio" href="programa.html#horaris">15 maig ’27 <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="contingut" class="contenidor"><section class="portada" aria-labelledby="titol-portada">
+  <div class="portada__text"><p class="antetitol"><span class="punt" aria-hidden="true"></span> 15 DE MAIG DE 2027 · ENTRADA GRATUÏTA</p>
+    <h1 id="titol-portada">El barri es viu.<br>La cultura<br><em>es comparteix.</em></h1>
+    <p class="portada__descripcio">Un dia per eixir al carrer, descobrir nous talents i trobar-nos. Art, música i moltes ganes de fer plaça.</p>
+    <div class="portada__accions"><a class="boto" href="programa.html">Descobreix el programa <span aria-hidden="true">↗</span></a><a class="enllac-text" href="informacio.html">Prepara la visita <span aria-hidden="true">→</span></a></div>
+    <div class="portada__dades"><span><strong>06</strong> activitats</span><span><strong>01</strong> dia per compartir</span></div>
+  </div>
+  <div class="portada__visual"><img src="img/placa-vesprada.svg" alt="Il·lustració d’una plaça amb façanes de colors, garlandes de llum i un escenari al capvespre" width="1600" height="1000"><div class="segell"><span>FEM</span><strong>PLAÇA!</strong><span>EDICIÓ 2027</span></div><span class="peu-visual">DE DIA, DE VESPRADA I AL VESPRE.</span></div>
+</section>
+<div class="cinta" aria-label="Disciplines de les jornades"><span>ART AL CARRER</span><span aria-hidden="true">✳</span><span>MÚSICA EN VIU</span><span aria-hidden="true">✳</span><span>CULTURA COMPARTIDA</span></div>
+<section class="bloc-destacades" aria-labelledby="destacades"><div class="titol-seccio"><div><p class="antetitol">COMENÇA A FER PLANS</p><h2 id="destacades">Un dia, moltes maneres<br>de viure’l.</h2></div><a class="enllac-text" href="programa.html">Totes les activitats <span aria-hidden="true">↗</span></a></div>
+<div class="graella"><article class="targeta" id="taller-cartells">
+  <img src="img/cartell.svg" alt="" width="640" height="360">
+  <div class="targeta__cos">
+    <span class="etiqueta">Destacada</span>
+    <h3>Taller de cartells</h3>
+    <p>Crea un cartell a partir de formes, colors i tipografia.</p>
+    <p><strong>10:00</strong> · Aula creativa</p>
+    <a href="informacio.html#arribar">Com arribar a aquesta activitat</a>
+  </div>
+</article><article class="targeta" id="ruta-art">
+  <img src="img/cartell.svg" alt="" width="640" height="360">
+  <div class="targeta__cos">
+    
+    <h3>Ruta d’art urbà</h3>
+    <p>Descobreix les obres i les històries del barri.</p>
+    <p><strong>11:00</strong> · Punt de trobada</p>
+    <a href="informacio.html#arribar">Com arribar a aquesta activitat</a>
+  </div>
+</article><article class="targeta" id="lectura">
+  <img src="img/cartell.svg" alt="" width="640" height="360">
+  <div class="targeta__cos">
+    
+    <h3>Lectura compartida</h3>
+    <p>Comparteix un fragment del teu llibre preferit.</p>
+    <p><strong>12:00</strong> · Biblioteca</p>
+    <a href="informacio.html#arribar">Com arribar a aquesta activitat</a>
+  </div>
+</article></div></section>
+<section class="franja" aria-labelledby="titol-franja">
+  <div class="franja__contingut"><p class="antetitol">LA PLAÇA ÉS DE TOTES I TOTS</p><h2 id="titol-franja">Hi ha llocs que es passen.<br>I llocs que <em>es viuen.</em></h2><p>Quan cau la vesprada, el barri s’ompli de llum, converses i música. Vine a formar-ne part.</p><a class="boto boto--clar" href="programa.html#concert">Ens veiem al concert <span aria-hidden="true">↗</span></a></div>
+</section>
+<aside class="avis avis--visita"><p class="antetitol">TOT A PUNT?</p><h2>Tu posa les ganes.<br>Nosaltres posem la plaça.</h2><p>Les activitats són gratuïtes. El taller de cartells té places limitades; consulta les condicions d’accés.</p><a href="informacio.html">Informació pràctica</a></aside></main>
+<footer class="peu"><div class="contenidor peu__interior"><a class="marca" href="index.html"><img src="img/logo.svg" alt="" width="48" height="48"><span>la plaça<span class="marca__subtitol">EL BARRI ÉS CULTURA</span></span></a><div><p>Ens trobem el 15 de maig.</p><p class="peu__nota">Projecte educatiu de DIW · Esdeveniment fictici.<br>Il·lustracions originals del material docent.</p></div><a href="informacio.html#arribar">Com arribar <span aria-hidden="true">↗</span></a></div></footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informació · La Plaça</title>
+  <link rel="stylesheet" href="css/estils.css">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <script src="js/navegacio.js" defer></script>
+</head>
+<body>
+<a class="salt" href="#contingut">Salta al contingut</a>
+<header class="capcalera">
+  <div class="contenidor capcalera__interior">
+    <a class="marca" href="index.html" aria-label="La Plaça · Inici">
+      <img src="img/logo.svg" alt="" width="48" height="48">
+      <span>la plaça<span class="marca__subtitol">CULTURA DE BARRI</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" hidden>
+      <span class="hamburguesa" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="menu-toggle__text">Menú</span>
+    </button>
+    <nav id="menu-principal" class="menu-panel" aria-label="Principal">
+      <ul class="menu">
+        <li><a href="index.html">Inici</a></li>
+        <li>
+          <details class="menu-desplegable">
+            <summary>Programa <span class="fletxa" aria-hidden="true"></span></summary>
+            <div class="submenu">
+              <p class="submenu__titol">TRIA EL TEU PLA</p>
+              <a href="programa.html"><span>Tot el programa</span><small>Sis propostes per viure el barri</small></a>
+              <a href="programa.html#horaris"><span>Horaris del dia</span><small>Organitza la teua visita</small></a>
+              <a href="programa.html#activitats"><span>Descobreix les activitats</span><small>Art, música, cinema i més</small></a>
+            </div>
+          </details>
+        </li>
+        <li><a href="informacio.html" aria-current="page">La teua visita</a></li>
+        <li><a class="menu__accio" href="programa.html#horaris">15 maig ’27 <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="contingut" class="contenidor"><p class="antetitol pagina-antetitol">ENS TROBEM AL BARRI</p><h1 class="pagina-titol">Informació pràctica</h1>
+<p>Tot el que necessites per preparar la visita.</p>
+<div class="disposicio-info"><div>
+<section id="arribar"><h2>Com arribar</h2><p>Les jornades se celebren a la Plaça de la Cultura, un espai fictici del nostre projecte.</p><ul><li>A peu: accés principal des del carrer Major.</li><li>Amb bicicleta: aparcament a l’entrada del recinte.</li><li>Transport públic: consulta les parades disponibles al teu municipi.</li></ul></section>
+<section id="condicions"><h2>Condicions d’accés</h2><p>L’entrada és gratuïta. El taller de cartells admet fins a 20 participants per ordre d’arribada. Les altres activitats tenen accés lliure fins a completar l’aforament.</p></section>
+<section><h2>Preguntes freqüents</h2>
+<details><summary>He de portar material al taller?</summary><p>El material bàsic està inclòs. Pots portar retalls de paper per personalitzar el cartell.</p></details>
+<details><summary>Què passa si plou?</summary><p>Les activitats exteriors es traslladen al centre cultural. Consulta els avisos a l’entrada.</p></details>
+<details><summary>Puc assistir amb infants?</summary><p>Sí. Han d’estar acompanyats d’una persona adulta.</p></details></section>
+</div><aside class="avis"><h2>Dades essencials</h2><p><strong>Data:</strong> 15 de maig de 2027.</p><p><strong>Horari:</strong> de 10:00 a 22:00.</p><p><strong>Entrada:</strong> gratuïta.</p><a href="programa.html">Torna al programa</a></aside></div></main>
+<footer class="peu"><div class="contenidor peu__interior"><a class="marca" href="index.html"><img src="img/logo.svg" alt="" width="48" height="48"><span>la plaça<span class="marca__subtitol">EL BARRI ÉS CULTURA</span></span></a><div><p>Ens trobem el 15 de maig.</p><p class="peu__nota">Projecte educatiu de DIW · Esdeveniment fictici.<br>Il·lustracions originals del material docent.</p></div><a href="informacio.html#arribar">Com arribar <span aria-hidden="true">↗</span></a></div></footer>
+</body>
+</html>

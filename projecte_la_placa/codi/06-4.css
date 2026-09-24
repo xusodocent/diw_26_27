@@ -1,0 +1,59 @@
+.boto:hover {
+  background: var(--violeta);
+}
+
+.boto--clar:hover {
+  background: white;
+}
+
+.targeta:hover, .targeta:focus-within {
+  transform: translateY(-.3rem);
+  box-shadow: 0 .7rem 1.5rem #30205210;
+}
+
+.targeta:nth-child(2n) > img {
+  filter: hue-rotate(35deg);
+}
+
+.targeta:nth-child(3n) > img {
+  filter: hue-rotate(295deg);
+}
+
+tbody tr:hover {
+  background: #f5f1fa;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .targeta:hover, .targeta:focus-within {
+    transform: none;
+  }
+}
+
+@media print {
+  .capcalera, .peu, .salt {
+    display: none;
+  }
+  body {
+    color: #000;
+    background: white;
+  }
+  .contenidor {
+    width: 100%;
+  }
+  .targeta {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+  .franja {
+    color: #000;
+    background: none;
+    min-height: auto;
+  }
+  .franja p:not(.antetitol), .franja h2 em {
+    color: #000;
+  }
+}

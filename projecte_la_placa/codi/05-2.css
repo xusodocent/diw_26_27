@@ -1,0 +1,78 @@
+.menu-desplegable {
+  position: relative;
+}
+
+.menu-desplegable > summary {
+  list-style: none;
+}
+
+.menu-desplegable > summary::-webkit-details-marker {
+  display: none;
+}
+
+.fletxa {
+  display: inline-block;
+  width: .45rem;
+  height: .45rem;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform .2s;
+}
+
+.menu-desplegable[open] .fletxa {
+  transform: rotate(225deg) translate(-2px, -1px);
+}
+
+.submenu {
+  position: absolute;
+  top: calc(100% + .85rem);
+  left: 0;
+  width: 19rem;
+  padding: .8rem;
+  border: 1px solid var(--vora);
+  border-radius: .9rem;
+  color: var(--tinta);
+  background: white;
+  box-shadow: 0 20px 50px #30205224;
+}
+
+.submenu__titol {
+  padding: .3rem .7rem;
+  font-size: .64rem;
+  letter-spacing: .14em;
+  font-weight: 800;
+  color: #746386;
+}
+
+.submenu a {
+  display: block;
+  padding: .8rem;
+  border-radius: .5rem;
+  text-decoration: none;
+}
+
+.submenu a:hover, .submenu a:focus-visible {
+  background: #f1edf8;
+}
+
+.submenu a[aria-current] {
+  background: #f1edf8;
+}
+
+.submenu span {
+  display: block;
+  font-size: .92rem;
+  font-weight: 750;
+}
+
+.submenu small {
+  display: block;
+  color: #695b78;
+  font-size: .76rem;
+  margin-top: .15rem;
+}
+
+.submenu a:focus-visible {
+  outline-color: var(--violeta);
+}
